@@ -46,7 +46,8 @@ function OrderForm() {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!name || name.length < 3) newErrors.name = "İsim en az 3 karakter olmalıdır.";
+    if (!name || name.length < 3)
+      newErrors.name = "İsim en az 3 karakter olmalıdır.";
     if (!pizzaSize) newErrors.pizzaSize = "Lütfen pizza boyutunu seçin.";
     if (!pizzaDough) newErrors.pizzaDough = "Lütfen hamur kalınlığını seçin.";
     if (extraIngredients.length < 4 || extraIngredients.length > 10)
@@ -75,7 +76,10 @@ function OrderForm() {
     };
 
     try {
-      const response = await axios.post("https://reqres.in/api/pizza", orderData);
+      const response = await axios.post(
+        "https://reqres.in/api/pizza",
+        orderData
+      );
       console.log("Sipariş Özeti:", response.data);
       // Sipariş verildiğinde yapılacak işlemler burada yer alacak.
       history.push("./OrderResult");
@@ -106,7 +110,9 @@ function OrderForm() {
         </p>
 
         <div className="input-container">
-          <h3>İsim <span style={{ color: "red" }}>*</span></h3>
+          <h3>
+            İsim <span style={{ color: "red" }}>*</span>
+          </h3>
           {errors.name && <p className="error">{errors.name}</p>}
           <Input
             type="text"
@@ -238,7 +244,9 @@ function OrderForm() {
               <h3>Sipariş Toplamı</h3>
               <div className="fiyatlar grey">
                 <p>Seçimler</p>
-                <p>{(extraIngredients.length * extraIngredientPrice).toFixed(2)}₺</p>
+                <p>
+                  {(extraIngredients.length * extraIngredientPrice).toFixed(2)}₺
+                </p>
               </div>
               <div className="fiyatlar red">
                 <p>Toplam</p>

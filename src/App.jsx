@@ -1,4 +1,8 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+} from "react-router-dom/cjs/react-router-dom.min";
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./pages/Home";
