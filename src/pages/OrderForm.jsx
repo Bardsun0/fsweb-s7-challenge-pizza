@@ -1,9 +1,231 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Form, FormGroup, Input, Label, Button } from "reactstrap";
+import "./OrderForm.css";
+
+const ingredientsList = [
+  "Pepperoni",
+  "Sosis",
+  "Kanada Jambonu",
+  "Tavuk Izgara",
+  "Soğan",
+  "Domates",
+  "Mısır",
+  "Sucuk",
+  "Jalapeno",
+  "Sarımsak",
+  "Biber",
+  "Ananas",
+  "Kabak",
+  "Brokoli",
+  "Zeytin",
+];
 
 function OrderForm() {
+  const [pizzaSize, setPizzaSize] = useState("");
+  const [pizzaDough, setPizzaDough] = useState("");
+  const [extraIngredients, setExtraIngredients] = useState([]);
+  const [orderNote, setOrderNote] = useState("");
+  const [quantity, setQuantity] = useState(1);
+  const [errors, setErrors] = useState({});
+  const price = 85.5;
+  const extraIngredientPrice = 5;
+
+  const handleIngredientChange = (ingredient) => {
+    setExtraIngredients((prev) =>
+      prev.includes(ingredient)
+        ? prev.filter((item) => item !== ingredient)
+        : prev.length < 10
+        ? [...prev, ingredient]
+        : prev
+    );
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!pizzaSize) newErrors.pizzaSize = "Lütfen pizza boyutunu seçin.";
+    if (!pizzaDough) newErrors.pizzaDough = "Lütfen hamur kalınlığını seçin.";
+    if (extraIngredients.length > 10)
+      newErrors.extraIngredients = "En fazla 10 malzeme seçebilirsiniz.";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const calculateTotalPrice = () => {
+    return price + extraIngredients.length * extraIngredientPrice;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+
+    const orderData = {
+      pizzaSize,
+      pizzaDough,
+      extraIngredients,
+      orderNote,
+      quantity,
+      totalPrice: calculateTotalPrice() * quantity,
+    };
+    console.log(orderData);
+    // Sipariş verildiğinde yapılacak işlemler burada yer alacak.
+  };
+
   return (
-    <div>OrderForm</div>
-  )
+    <>
+      <Form className="formContainer" onSubmit={handleSubmit}>
+        <h3>Position Absolute Acı Pizza</h3>
+        <div className="rating-container">
+          <div className="price">85.50₺</div>
+          <div className="rating">
+            <span>4.9</span>
+            <span>(200)</span>
+          </div>
+        </div>
+
+        <p className="textInfo">
+          Frontent Dev olarak hala position:absolute kullaniyorsan bu çok acı
+          pizza tam sana göre. Pizza. domates, peynir ve genellikle çeşitli
+          diger malzemelerle kaplanmış. daha sonra geleneksel olarak odun
+          ateşinde bir firinda yüksek sicaklkta pişirilen, genellikle yuvarlak,
+          düzieştirilmiş mayalı bugday bazlı hamurdan oluşan italyan kökenli
+          lezzetli bir yemektir.. Küçük bir pizzaya bazen pizzetta denir.
+        </p>
+        <div className="pizza-size-container">
+          <div className="pizza-size-card">
+            <h3>
+              Boyut Seç <span style={{ color: "red" }}>*</span>
+            </h3>
+            {errors.pizzaSize && <p className="error">{errors.pizzaSize}</p>}
+            <FormGroup>
+              <Input
+                id="küçük"
+                type="radio"
+                name="pizzaSize"
+                value="Küçük"
+                onChange={(e) => setPizzaSize(e.target.value)}
+              />
+              <Label htmlFor="küçük">Küçük</Label>
+            </FormGroup>
+
+            <FormGroup>
+              <Input
+                id="orta"
+                type="radio"
+                name="pizzaSize"
+                value="Orta"
+                onChange={(e) => setPizzaSize(e.target.value)}
+              />
+              <Label htmlFor="orta">Orta</Label>
+            </FormGroup>
+
+            <FormGroup>
+              <Input
+                id="büyük"
+                type="radio"
+                name="pizzaSize"
+                value="Büyük"
+                onChange={(e) => setPizzaSize(e.target.value)}
+              />
+              <Label htmlFor="büyük">Büyük</Label>
+            </FormGroup>
+          </div>
+
+          <div className="pizza-dough-card">
+            <h3>
+              Hamur Seç<span style={{ color: "red" }}>*</span>
+            </h3>
+            {errors.pizzaDough && <p className="error">{errors.pizzaDough}</p>}
+            <FormGroup>
+              <Input
+                type="select"
+                name="pizzaHamur"
+                value={pizzaDough}
+                onChange={(e) => setPizzaDough(e.target.value)}
+              >
+                <option value="" disabled>
+                  Hamur Kalınlığı
+                </option>
+                <option value="klasik">Klasik Hamur</option>
+                <option value="ince">İnce Hamur</option>
+              </Input>
+            </FormGroup>
+          </div>
+        </div>
+        <div>
+          <h3>Ek Malzemeler</h3>
+          <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
+          {errors.extraIngredients && (
+            <p className="error">{errors.extraIngredients}</p>
+          )}
+        </div>
+
+        <div className="malzemeler-container">
+          {ingredientsList.map((ingredient) => (
+            <FormGroup key={ingredient} check>
+              <Label check>
+                <Input
+                  type="checkbox"
+                  onChange={() => handleIngredientChange(ingredient)}
+                  checked={extraIngredients.includes(ingredient)}
+                />{" "}
+                {ingredient}
+              </Label>
+            </FormGroup>
+          ))}
+        </div>
+
+        <div className="input-container">
+          <h3>Sipariş Notu</h3>
+          <Input
+            type="textarea"
+            name="siparisNotu"
+            placeholder="Siparişine eklemek istediğin bir not var mı?"
+            id="textArea"
+            value={orderNote}
+            onChange={(e) => setOrderNote(e.target.value)}
+          />
+        </div>
+        <hr />
+
+        <div className="siparis-container">
+          <div className="counter-button">
+            <Button
+              className="counter-button1"
+              onClick={() => setQuantity(quantity - 1)}
+              disabled={quantity <= 1}
+            >
+              -
+            </Button>
+            <span className="numberCounter">{quantity}</span>
+            <Button
+              className="counter-button2"
+              onClick={() => setQuantity(quantity + 1)}
+            >
+              +
+            </Button>
+          </div>
+
+          <div className="siparis-toplam">
+            <div className="price-container">
+              <h3>Sipariş Toplamı</h3>
+              <div className="fiyatlar grey">
+                <p>Seçimler</p>
+                <p>{extraIngredients * extraIngredientPrice.toFixed(2)}₺</p>
+              </div>
+              <div className="fiyatlar red">
+                <p>Toplam</p>
+                <p>{(calculateTotalPrice() * quantity).toFixed(2)}₺</p>
+              </div>
+            </div>
+            <Button type="submit" className="submit-button">
+              Sipariş Ver
+            </Button>
+          </div>
+        </div>
+      </Form>
+    </>
+  );
 }
 
-export default OrderForm
+export default OrderForm;
