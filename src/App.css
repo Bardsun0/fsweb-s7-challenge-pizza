@@ -12,3 +12,24 @@ header {
 .error {
   color: red;
 }
+
+.orderSuccess {
+  font-family: Roboto Condensed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ce2829;
+  color: #faf7f2;
+  height: 100vh;
+}
+
+.orderSuccess p {
+  margin: 0;
+  padding: 0;
+  font-size: 86px;
+  font-weight: 300;
+  line-height: 92px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Input, Label, Button } from "reactstrap";
 import "./OrderForm.css";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const ingredientsList = [
   "Pepperoni",
@@ -29,6 +30,7 @@ function OrderForm() {
   const [errors, setErrors] = useState({});
   const price = 85.5;
   const extraIngredientPrice = 5;
+  const history = useHistory();
 
   const handleIngredientChange = (ingredient) => {
     setExtraIngredients((prev) =>
@@ -69,6 +71,7 @@ function OrderForm() {
     };
     console.log(orderData);
     // Sipariş verildiğinde yapılacak işlemler burada yer alacak.
+    history.push('./OrderResult');
   };
 
   return (

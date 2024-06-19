@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 function OrderResult() {
   return (
-    <div>OrderResult</div>
-  )
+    <div className="orderSuccess">
+      <p>TEBRİKLER!</p>
+      <p>SİPARİŞİNİZ ALINDI!</p>
+    </div>
+  );
 }
 
-export default OrderResult
+export default OrderResult;
