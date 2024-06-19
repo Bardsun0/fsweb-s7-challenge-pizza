@@ -13,13 +13,12 @@ const ingredientsList = [
   "Domates",
   "Mısır",
   "Sucuk",
-  "Jalapeno",
+  "Jalepeno",
   "Sarımsak",
   "Biber",
+  "Mozarella",
   "Ananas",
   "Kabak",
-  "Brokoli",
-  "Zeytin",
 ];
 
 function OrderForm() {

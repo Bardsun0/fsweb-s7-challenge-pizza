@@ -1,3 +1,4 @@
+/* OrderForm.css */
 .formContainer {
   max-width: 600px;
   margin: 0 auto;
@@ -23,6 +24,7 @@
   line-height: 37.47px;
   text-align: left;
 }
+
 .rating {
   display: flex;
   justify-content: space-between;
@@ -53,9 +55,9 @@
 }
 
 .malzemeler-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   font-family: Barlow;
   font-size: 16px;
   font-weight: 700;
@@ -64,11 +66,8 @@
 }
 
 .malzeme-label {
-  flex-basis: calc(
-    33.33% - 10px
-  ); /*  bunu çözene kadar canım çıktı.   3 malzeme içeren sütunlar*/
-  margin-bottom: 10px;
-  padding: 5px;
+  display: flex;
+  align-items: center;
 }
 
 #textArea {
@@ -110,6 +109,7 @@ hr {
   display: flex;
   justify-content: space-between;
 }
+
 .siparis-toplam {
   width: 386px;
   height: 259px;
@@ -126,6 +126,7 @@ hr {
   padding: 0px 60px;
   height: 30px;
 }
+
 .price-container {
   margin: 25px 0;
 }
@@ -165,3 +166,4 @@ hr {
 .submit-button:hover {
   background-color: #ffa000;
 }
+
