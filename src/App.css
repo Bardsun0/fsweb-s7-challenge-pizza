@@ -8,3 +8,7 @@ header {
   padding: 3rem;
   background-color: #ce2829;
 }
+
+.error {
+  color: red;
+}
