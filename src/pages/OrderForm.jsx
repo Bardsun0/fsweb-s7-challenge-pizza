@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Input, Label, Button } from "reactstrap";
+import axios from "axios";
 import "./OrderForm.css";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom";
 
 const ingredientsList = [
   "Pepperoni",
@@ -22,6 +23,7 @@ const ingredientsList = [
 ];
 
 function OrderForm() {
+  const [name, setName] = useState("");
   const [pizzaSize, setPizzaSize] = useState("");
   const [pizzaDough, setPizzaDough] = useState("");
   const [extraIngredients, setExtraIngredients] = useState([]);
@@ -44,10 +46,11 @@ function OrderForm() {
 
   const validateForm = () => {
     const newErrors = {};
+    if (!name || name.length < 3) newErrors.name = "İsim en az 3 karakter olmalıdır.";
     if (!pizzaSize) newErrors.pizzaSize = "Lütfen pizza boyutunu seçin.";
     if (!pizzaDough) newErrors.pizzaDough = "Lütfen hamur kalınlığını seçin.";
-    if (extraIngredients.length > 10)
-      newErrors.extraIngredients = "En fazla 10 malzeme seçebilirsiniz.";
+    if (extraIngredients.length < 4 || extraIngredients.length > 10)
+      newErrors.extraIngredients = "4 ila 10 malzeme seçmelisiniz.";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -57,11 +60,12 @@ function OrderForm() {
     return price + extraIngredients.length * extraIngredientPrice;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
     const orderData = {
+      name,
       pizzaSize,
       pizzaDough,
       extraIngredients,
@@ -69,9 +73,15 @@ function OrderForm() {
       quantity,
       totalPrice: calculateTotalPrice() * quantity,
     };
-    console.log(orderData);
-    // Sipariş verildiğinde yapılacak işlemler burada yer alacak.
-    history.push('./OrderResult');
+
+    try {
+      const response = await axios.post("https://reqres.in/api/pizza", orderData);
+      console.log("Sipariş Özeti:", response.data);
+      // Sipariş verildiğinde yapılacak işlemler burada yer alacak.
+      history.push("./OrderResult");
+    } catch (error) {
+      console.error("Sipariş başarısız:", error);
+    }
   };
 
   return (
@@ -94,6 +104,19 @@ function OrderForm() {
           düzieştirilmiş mayalı bugday bazlı hamurdan oluşan italyan kökenli
           lezzetli bir yemektir.. Küçük bir pizzaya bazen pizzetta denir.
         </p>
+
+        <div className="input-container">
+          <h3>İsim <span style={{ color: "red" }}>*</span></h3>
+          {errors.name && <p className="error">{errors.name}</p>}
+          <Input
+            type="text"
+            name="name"
+            placeholder="İsminizi girin"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+
         <div className="pizza-size-container">
           <div className="pizza-size-card">
             <h3>
@@ -155,9 +178,10 @@ function OrderForm() {
             </FormGroup>
           </div>
         </div>
+
         <div>
           <h3>Ek Malzemeler</h3>
-          <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
+          <p>4 ila 10 malzeme seçmelisiniz. 5₺</p>
           {errors.extraIngredients && (
             <p className="error">{errors.extraIngredients}</p>
           )}
@@ -214,7 +238,7 @@ function OrderForm() {
               <h3>Sipariş Toplamı</h3>
               <div className="fiyatlar grey">
                 <p>Seçimler</p>
-                <p>{extraIngredients * extraIngredientPrice.toFixed(2)}₺</p>
+                <p>{(extraIngredients.length * extraIngredientPrice).toFixed(2)}₺</p>
               </div>
               <div className="fiyatlar red">
                 <p>Toplam</p>
