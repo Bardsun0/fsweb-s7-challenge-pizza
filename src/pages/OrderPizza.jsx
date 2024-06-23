@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Input, Label, Button } from "reactstrap";
 import axios from "axios";
-import "./OrderForm.css";
+import "./OrderPizza.css";
 import { useHistory } from "react-router-dom";
 
 const ingredientsList = [
@@ -21,7 +21,7 @@ const ingredientsList = [
   "Kabak",
 ];
 
-function OrderForm() {
+function OrderPizza() {
   const [name, setName] = useState("");
   const [pizzaSize, setPizzaSize] = useState("");
   const [pizzaDough, setPizzaDough] = useState("");
@@ -81,7 +81,7 @@ function OrderForm() {
       );
       console.log("Sipariş Özeti:", response.data);
       // Sipariş verildiğinde yapılacak işlemler burada yer alacak.
-      history.push("./OrderResult");
+      history.push("./Success");
     } catch (error) {
       console.error("Sipariş başarısız:", error);
     }
@@ -262,4 +262,4 @@ function OrderForm() {
   );
 }
 
-export default OrderForm;
+export default OrderPizza;

@@ -6,7 +6,7 @@ function Home() {
   let history = useHistory();
 
   function handleClick() {
-    history.push("/orderForm");
+    history.push("/OrderPizza");
   }
 
   return (

@@ -6,8 +6,8 @@ import {
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import OrderResult from "./pages/OrderResult";
-import OrderForm from "./pages/OrderForm";
+import Success from "./pages/Success";
+import OrderPizza from "./pages/OrderPizza";
 
 function App() {
   return (
@@ -18,13 +18,13 @@ function App() {
           {" "}
           <Home />{" "}
         </Route>
-        <Route path="/OrderForm">
+        <Route path="/OrderPizza">
           {" "}
-          <OrderForm />{" "}
+          <OrderPizza />{" "}
         </Route>
-        <Route path="/OrderResult">
+        <Route path="/Success">
           {" "}
-          <OrderResult />
+          <Success />
         </Route>
       </Switch>
     </BrowserRouter>
