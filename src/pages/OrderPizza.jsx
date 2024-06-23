@@ -80,8 +80,10 @@ function OrderPizza() {
         orderData
       );
       console.log("Sipariş Özeti:", response.data);
-      // Sipariş verildiğinde yapılacak işlemler burada yer alacak.
-      history.push("./Success");
+      history.push({
+        pathname: "/success",
+        state: { orderData }, // Pass the order data as state
+      });
     } catch (error) {
       console.error("Sipariş başarısız:", error);
     }
@@ -177,8 +179,9 @@ function OrderPizza() {
                 <option value="" disabled>
                   Hamur Kalınlığı
                 </option>
-                <option value="klasik">Klasik Hamur</option>
+                <option value="Klasik">Klasik Hamur</option>
                 <option value="ince">İnce Hamur</option>
+                <option value="Süpper İnce">Süpper İnce Hamur</option>
               </Input>
             </FormGroup>
           </div>
