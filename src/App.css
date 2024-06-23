@@ -4,11 +4,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
 
 header {
+  background: #CE2829;
+  width: 100vw;
+  height: 101px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 3rem;
-  background-color: #ce2829;
 }
 
 .error {
