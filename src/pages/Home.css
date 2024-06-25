@@ -57,3 +57,101 @@
   background-color: #e0a300;
   color: #292929;
 }
+
+.homeArticle {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  justify-content: center;
+}
+
+.homeArticle p {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  font-weight: 500;
+}
+
+.cardPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 100px 0;
+  background-color: #FAF7F2;
+}
+
+.cardPage2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 23px;
+}
+
+.card-1 {
+  width: 636px;
+  height: 536px;
+  background-image: url("./Assets/mile2-aseets/cta/kart-1.png");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border-radius: 15px;
+}
+
+.card-2 {
+  width: 636px;
+  height: 256px;
+  background-image: url("./Assets/mile2-aseets/cta/kart-2.png");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border-radius: 15px;
+
+}
+
+.card-2 p {
+  font-size: 30px;
+  font-family: "Barlow";
+  color: white;
+  font-weight: 500;
+  margin: 0;
+}
+
+.card-3 {
+  width: 636px;
+  height: 257px;
+  background-image: url("./Assets/mile2-aseets/cta/kart-3.png");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border-radius: 15px;
+}
+
+.card-3 p {
+  font-size: 30px;
+  font-family: "Barlow";
+  color: black;
+  font-weight: 500;
+  margin: 0;
+}
+
+.elements-1 {
+  width: max-content;
+  margin: 50px 0 0 50px;
+}
+
+.elements-1 .ozel {
+  font-family: "Quattrocento";
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.elements-1 .burger {
+  font-family: "Barlow";
+  color: white;
+  margin: 0;
+  font-size: 18px;
+}

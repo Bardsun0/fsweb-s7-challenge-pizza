@@ -9,14 +9,14 @@
   align-items: center;
 }
 
-.div-1 {
+.footer-div-1 {
   display: flex;
   justify-content: space-between;
   width: 1320px;
   padding: 6rem 0 3rem 0;
 }
 
-.div-2 {
+.footer-div-2 {
   display: flex;
   position: relative;
   height: 350px;
@@ -28,7 +28,7 @@
   left: 0;
 }
 
-.div-3 {
+.footer-div-3 {
   width: 305px;
   display: flex;
   flex-direction: column;
@@ -38,14 +38,14 @@
   height: 300px;
 }
 
-.div-4 {
+.footer-div-4 {
   text-align: left;
   align-items: flex-start;
   display: flex;
   gap: 1rem;
 }
 
-.div-4 img {
+.footer-div-4 img {
   width: 28px;
   height: 28px;
 }
@@ -64,7 +64,7 @@
   gap: 1rem;
 }
 
-.div-5 {
+.footer-div-5 {
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -76,13 +76,13 @@
   justify-content: space-around;
 }
 
-.div-5 h1 {
+.footer-div-5 h1 {
   font-size: 24px;
   font-weight: 500;
   text-align: center;
 }
 
-.div-6 {
+.footer-div-6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -90,7 +90,7 @@
   height: 290px;
 }
 
-.div-6 h1 {
+.footer-div-6 h1 {
   font-family: "Barlow", sans-serif;
   font-weight: 500;
   font-size: 24px;
@@ -109,20 +109,20 @@
     padding: 0;
 }
 
-.div-7 {
+.footer-div-7 {
     border-top: 1px solid #FFFFFF26;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.div-8 {
+.footer-div-8 {
     width: 1320px;
     display: flex;
     justify-content: space-between;
 }
 
-.div-8 p {
+.footer-div-8 p {
     font-family: "Barlow", sans-serif;
     font-weight: 400;
     font-size: 16px;

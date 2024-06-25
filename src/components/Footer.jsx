@@ -4,14 +4,14 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer-container">
-      <div className="div-1">
-        <div className="div-2">
+      <div className="footer-div-1">
+        <div className="footer-div-2">
           <img
             src="../../Assets/mile2-aseets/footer/logo-footer.svg"
             className="footer-logo"
           />
-          <div className="div-3">
-            <div className="div-4">
+          <div className="footer-div-3">
+            <div className="footer-div-4">
               <img src="../../Assets/mile2-aseets/footer/icons/icon-1.png" />
               <span>
                 341 Londonderry Road, <br /> Istanbul Türkiye{" "}
@@ -26,7 +26,7 @@ function Footer() {
               <span>+90 216 123 45 67 </span>
             </div>
           </div>
-          <div className="div-5">
+          <div className="footer-div-5">
             <h1>Sıccacık Menuler</h1>
             <ul style={{ listStyleType: "none" }}>
               <p>Terminal Pizza</p>
@@ -38,7 +38,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="div-6">
+        <div className="footer-div-6">
           <h1>Instagram</h1>
           <ul className="footer-ul">
             <li>
@@ -62,8 +62,8 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="div-7">
-        <div className="div-8">
+      <div className="footer-div-7">
+        <div className="footer-div-8">
           <p>© 2023 Teknolojik Yemekler.</p>
           <ul>
             <img

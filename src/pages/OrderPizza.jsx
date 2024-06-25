@@ -3,6 +3,7 @@ import { Form, FormGroup, Input, Label, Button } from "reactstrap";
 import axios from "axios";
 import "./OrderPizza.css";
 import { useHistory } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const ingredientsList = [
   "Pepperoni",
@@ -261,6 +262,7 @@ function OrderPizza() {
           </div>
         </div>
       </Form>
+      <Footer />
     </>
   );
 }
