@@ -29,7 +29,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <article className="homeArticle">
+      <div className="homeArticle">
         <p>
           <img
             style={{ paddingRight: "10px" }}
@@ -72,44 +72,110 @@ function Home() {
           />
           Gazlı İçecek
         </p>
-      </article>
-      <article>
-        <div className="cardPage">
-          <div className="card-1">
-            <div className="elements-1">
-              <p className="ozel">Özel</p>
-              <p
-                className="ozel"
-                style={{
-                  margin: "0 0 5px 0",
-                }}
-              >
-                Lezzetus
-              </p>
-              <p className="burger">Position:Absulute Acı Burger</p>
+      </div>
+      <div className="cardPage">
+        <div className="card-1">
+          <div className="elements-1">
+            <p className="ozel">Özel</p>
+            <p
+              className="ozel"
+              style={{
+                margin: "0 0 5px 0",
+              }}
+            >
+              Lezzetus
+            </p>
+            <p className="burger">Position:Absulute Acı Burger</p>
+            <button className="siparis">Sipariş Ver</button>
+          </div>
+        </div>
+        <div className="cardPage2">
+          <div className="card-2">
+            <div style={{ margin: "50px 0 0 50px" }}>
+              <p>Hackathlon</p>
+              <p>Burger Menü</p>
               <button className="siparis">Sipariş Ver</button>
             </div>
           </div>
-          <div className="cardPage2">
-            <div className="card-2">
-              <div style={{ margin: "50px 0 0 50px" }}>
-                <p>Hackathlon</p>
-                <p>Burger Menü</p>
-                <button className="siparis">Sipariş Ver</button>
-              </div>
-            </div>
-            <div className="card-3">
-              <div style={{ margin: "50px 0 0 50px" }}>
-                <p>
-                  <span style={{ color: "#CE2829" }}>Çoooook</span> hızlı
-                </p>
-                <p>npm gibi kurye</p>
-                <button className="siparis">Sipariş Ver</button>
-              </div>
+          <div className="card-3">
+            <div style={{ margin: "50px 0 0 50px" }}>
+              <p>
+                <span style={{ color: "#CE2829" }}>Çoooook</span> hızlı
+              </p>
+              <p>npm gibi kurye</p>
+              <button className="siparis">Sipariş Ver</button>
             </div>
           </div>
         </div>
-      </article>
+      </div>
+      <div className="menu-section">
+        <h2>en çok paketlenen menüler</h2>
+        <h3>Acıktıran Kodlara Doyuran Lezzetler</h3>
+        <div className="menu-categories">
+          <button onClick={handleClick} className="category-button">
+            <img src="../../Assets/mile2-aseets/icons/1.svg" alt="Ramen" />{" "}
+            Ramen
+          </button>
+          <button onClick={handleClick} className="category-button">
+            <img src="../../Assets/mile2-aseets/icons/2.svg" alt="Pizza" />{" "}
+            Pizza
+          </button>
+          <button onClick={handleClick} className="category-button">
+            <img src="../../Assets/mile2-aseets/icons/3.svg" alt="Burger" />{" "}
+            Burger
+          </button>
+          <button onClick={handleClick} className="category-button">
+            <img
+              src="../../Assets/mile2-aseets/icons/4.svg"
+              alt="French fries"
+            />{" "}
+            French fries
+          </button>
+          <button onClick={handleClick} className="category-button">
+            <img src="../../Assets/mile2-aseets/icons/5.svg" alt="Fast food" />{" "}
+            Fast food
+          </button>
+          <button onClick={handleClick} className="category-button">
+            <img
+              src="../../Assets/mile2-aseets/icons/6.svg"
+              alt="Soft drinks"
+            />{" "}
+            Soft drinks
+          </button>
+        </div>
+        <div className="menu-items">
+          <div className="menu-item">
+            <img
+              onClick={handleClick}
+              src="../../Assets/mile2-aseets/pictures/food-1.png"
+              alt="Terminal Pizza"
+            />
+            <h4>Terminal Pizza</h4>
+            <p>4.9 (200)</p>
+            <p>60₺</p>
+          </div>
+          <div className="menu-item">
+            <img
+              onClick={handleClick}
+              src="../../Assets/mile2-aseets/pictures/food-2.png"
+              alt="Position Absolute Acı Pizza"
+            />
+            <h4>Position Absolute Acı Pizza</h4>
+            <p>4.9 (928)</p>
+            <p>85₺</p>
+          </div>
+          <div className="menu-item">
+            <img
+              onClick={handleClick}
+              src="../../Assets/mile2-aseets/pictures/food-3.png"
+              alt="useEffect Tavuklu Burger"
+            />
+            <h4>useEffect Tavuklu Burger</h4>
+            <p>4.9 (462)</p>
+            <p>75₺</p>
+          </div>
+        </div>
+      </div>
       <Footer />
     </>
   );
