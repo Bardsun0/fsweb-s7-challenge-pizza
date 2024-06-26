@@ -56,13 +56,29 @@
 
 .malzemeler-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  font-family: Barlow;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px; 
+}
+
+.malzemeler-container .form-group {
+  display: flex;
+  align-items: center;
+}
+
+.malzemeler-container .form-group label {
+  display: flex;
+  align-items: center;
   font-size: 16px;
-  font-weight: 700;
-  line-height: 28.8px;
-  text-align: left;
+  font-weight: bold; 
+  color: #333; 
+  padding: 10px; 
+  background-color: #fff; 
+  border-radius: 4px; 
+}
+
+.malzemeler-container .form-group input[type="checkbox"] {
+  margin-right: 10px; 
+  accent-color: #FDC913; 
 }
 
 
