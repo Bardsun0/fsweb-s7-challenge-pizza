@@ -4,6 +4,7 @@ import axios from "axios";
 import "./OrderPizza.css";
 import { useHistory } from "react-router-dom";
 import Footer from "../components/Footer";
+import MapComponent from "../components/MapComponent";
 
 const ingredientsList = [
   "Pepperoni",
@@ -222,7 +223,7 @@ function OrderPizza() {
             </div>
           ))}
         </div>
-
+        <MapComponent />
         <div className="input-container">
           <h3>Sipariş Notu</h3>
           <Input
