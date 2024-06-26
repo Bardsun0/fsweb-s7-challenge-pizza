@@ -84,7 +84,7 @@ function OrderPizza() {
       console.log("Sipariş Özeti:", response.data);
       history.push({
         pathname: "/success",
-        state: { orderData }, // Pass the order data as state
+        state: { orderData }, 
       });
     } catch (error) {
       console.error("Sipariş başarısız:", error);
