@@ -128,3 +128,27 @@
     font-size: 16px;
     color: white;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 20px;
+    height: auto;
+  }
+
+  .footer-div-1, .footer-div-2, .footer-div-3, .footer-div-4, .footer-div-5, .footer-div-6, .footer-div-7, .footer-div-8 {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .footer-div-4 img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-div-8 {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

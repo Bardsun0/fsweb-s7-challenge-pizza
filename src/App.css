@@ -87,3 +87,53 @@ header {
   font-size: 24px;
   font-family: "Barlow", sans-serif;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  .orderSuccess {
+    padding: 20px;
+  }
+
+  .orderDetails {
+    padding: 10px;
+  }
+
+  .orderTotal {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .footer-container {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .footer-div-1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-div-2 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-div-3, .footer-div-5, .footer-div-6 {
+    width: 100%;
+  }
+
+  .footer-div-7 {
+    text-align: center;
+  }
+
+  .footer-div-8 {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

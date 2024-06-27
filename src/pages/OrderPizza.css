@@ -246,3 +246,37 @@ hr {
   padding: 10px;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .pizza-size-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .malzemeler-container {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .counter-button {
+    flex-direction: column;
+  }
+
+  .siparis-container {
+    flex-direction: column;
+  }
+
+  .siparis-toplam {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .submit-button {
+    height: 50px;
+  }
+}

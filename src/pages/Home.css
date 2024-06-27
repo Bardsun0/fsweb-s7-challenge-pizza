@@ -265,3 +265,57 @@
   font-size: 1.1rem;
   color: #292929;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 20px;
+    height: auto;
+  }
+
+  .home-page-div {
+    width: 90%;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .home-page h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    width: 100%;
+  }
+
+  .siparis-button {
+    width: 150px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .homeArticle {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cardPage {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  .cardPage2 {
+    gap: 15px;
+  }
+
+  .card-1, .card-2, .card-3 {
+    width: 90%;
+    height: auto;
+  }
+
+  .menu-section {
+    padding: 20px 10px;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
