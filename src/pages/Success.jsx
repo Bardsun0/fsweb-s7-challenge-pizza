@@ -1,10 +1,6 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 
-function Success() {
-  const location = useLocation();
-  const { orderData } = location.state || {};
-
+function Success({ orderData }) {
   if (!orderData) {
     return <div>Order data is missing</div>;
   }

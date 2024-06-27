@@ -3,7 +3,6 @@ import { Form, FormGroup, Input, Label, Button } from "reactstrap";
 import axios from "axios";
 import "./OrderPizza.css";
 import { useHistory } from "react-router-dom";
-import Footer from "../components/Footer";
 import MapComponent from "../components/MapComponent";
 
 const ingredientsList = [
@@ -23,7 +22,7 @@ const ingredientsList = [
   "Kabak",
 ];
 
-function OrderPizza() {
+function OrderPizza({ setOrderData }) {
   const [name, setName] = useState("");
   const [pizzaSize, setPizzaSize] = useState("");
   const [pizzaDough, setPizzaDough] = useState("");
@@ -82,10 +81,8 @@ function OrderPizza() {
         orderData
       );
       console.log("Sipariş Özeti:", response.data);
-      history.push({
-        pathname: "/success",
-        state: { orderData },
-      });
+      setOrderData(response.data);
+      history.push("/success");
     } catch (error) {
       console.error("Sipariş başarısız:", error);
     }
@@ -94,7 +91,7 @@ function OrderPizza() {
   return (
     <>
       <Form className="formContainer" onSubmit={handleSubmit}>
-        <img src="./Assets/mile2-aseets/pictures/form-banner.png" />
+        <img src="./Assets/mile2-aseets/pictures/form-banner.png" alt="Banner"/>
         <h3>Position Absolute Acı Pizza</h3>
         <div className="rating-container">
           <div className="price">85.50₺</div>
@@ -278,7 +275,6 @@ function OrderPizza() {
           </div>
         </div>
       </Form>
-      <Footer />
     </>
   );
 }
