@@ -84,7 +84,7 @@ function OrderPizza() {
       console.log("Sipariş Özeti:", response.data);
       history.push({
         pathname: "/success",
-        state: { orderData }, 
+        state: { orderData },
       });
     } catch (error) {
       console.error("Sipariş başarısız:", error);
@@ -119,6 +119,7 @@ function OrderPizza() {
           </h3>
           {errors.name && <p className="error">{errors.name}</p>}
           <Input
+            className="fullnameTest"
             type="text"
             name="name"
             placeholder="İsminizi girin"
@@ -214,6 +215,8 @@ function OrderPizza() {
             <div className="form-group" key={ingredient}>
               <label>
                 <input
+                  name="ekMalzeme"
+                  value={ingredient}
                   type="checkbox"
                   onChange={() => handleIngredientChange(ingredient)}
                   checked={extraIngredients.includes(ingredient)}
