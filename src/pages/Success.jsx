@@ -2,7 +2,11 @@ import React from "react";
 
 function Success({ orderData }) {
   if (!orderData) {
-    return <div>Order data is missing</div>;
+    return (
+      <>
+        <div>Order data is missing</div>
+      </>
+    );
   }
 
   return (

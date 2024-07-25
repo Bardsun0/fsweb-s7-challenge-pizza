@@ -31,45 +31,27 @@ function Home() {
       </div>
       <div className="homeArticle">
         <p>
-          <img
-            style={{ paddingRight: "10px" }}
-            src="/1.svg"
-          />
+          <img style={{ paddingRight: "10px" }} src="/1.svg" />
           YENİ! Kore
         </p>
         <p>
-          <img
-            style={{ paddingRight: "10px" }}
-            src="/2.svg"
-          />
+          <img style={{ paddingRight: "10px" }} src="/2.svg" />
           Pizza
         </p>
         <p>
-          <img
-            style={{ paddingRight: "10px" }}
-            src="/3.svg"
-          />
+          <img style={{ paddingRight: "10px" }} src="/3.svg" />
           Burger
         </p>
         <p>
-          <img
-            style={{ paddingRight: "10px" }}
-            src="/4.svg"
-          />
+          <img style={{ paddingRight: "10px" }} src="/4.svg" />
           Kızartmalar
         </p>
         <p>
-          <img
-            style={{ paddingRight: "10px" }}
-            src="/5.svg"
-          />
+          <img style={{ paddingRight: "10px" }} src="/5.svg" />
           Fast food
         </p>
         <p>
-          <img
-            style={{ paddingRight: "10px" }}
-            src="/6.svg"
-          />
+          <img style={{ paddingRight: "10px" }} src="/6.svg" />
           Gazlı İçecek
         </p>
       </div>
@@ -113,43 +95,27 @@ function Home() {
         <h3>Acıktıran Kodlara Doyuran Lezzetler</h3>
         <div className="menu-categories">
           <button onClick={handleClick} className="category-button">
-            <img src="/1.svg" alt="Ramen" />{" "}
-            Ramen
+            <img src="/1.svg" alt="Ramen" /> Ramen
           </button>
           <button onClick={handleClick} className="category-button">
-            <img src="/2.svg" alt="Pizza" />{" "}
-            Pizza
+            <img src="/2.svg" alt="Pizza" /> Pizza
           </button>
           <button onClick={handleClick} className="category-button">
-            <img src="/3.svg" alt="Burger" />{" "}
-            Burger
+            <img src="/3.svg" alt="Burger" /> Burger
           </button>
           <button onClick={handleClick} className="category-button">
-            <img
-              src="/4.svg"
-              alt="French fries"
-            />{" "}
-            French fries
+            <img src="/4.svg" alt="French fries" /> French fries
           </button>
           <button onClick={handleClick} className="category-button">
-            <img src="/5.svg" alt="Fast food" />{" "}
-            Fast food
+            <img src="/5.svg" alt="Fast food" /> Fast food
           </button>
           <button onClick={handleClick} className="category-button">
-            <img
-              src="/6.svg"
-              alt="Soft drinks"
-            />{" "}
-            Soft drinks
+            <img src="/6.svg" alt="Soft drinks" /> Soft drinks
           </button>
         </div>
         <div className="menu-items">
           <div className="menu-item">
-            <img
-              onClick={handleClick}
-              src="/food-1.png"
-              alt="Terminal Pizza"
-            />
+            <img onClick={handleClick} src="/food-1.png" alt="Terminal Pizza" />
             <h4>Terminal Pizza</h4>
             <p>4.9 (200)</p>
             <p>60₺</p>

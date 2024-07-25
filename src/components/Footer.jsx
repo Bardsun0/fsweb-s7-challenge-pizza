@@ -6,10 +6,7 @@ function Footer() {
     <footer className="footer-container">
       <div className="footer-div-1">
         <div className="footer-div-2">
-          <img
-            src="/logo-footer.svg"
-            className="footer-logo"
-          />
+          <img src="/logo-footer.svg" className="footer-logo" />
           <div className="footer-div-3">
             <div className="footer-div-4">
               <img src="/icon-1.png" />
@@ -66,10 +63,7 @@ function Footer() {
         <div className="footer-div-8">
           <p>© 2023 Teknolojik Yemekler.</p>
           <ul>
-            <img
-              src="/tw.png"
-              style={{ width: "18px", height: "15px" }}
-            />
+            <img src="/tw.png" style={{ width: "18px", height: "15px" }} />
           </ul>
         </div>
       </div>

@@ -91,10 +91,7 @@ function OrderPizza({ setOrderData }) {
   return (
     <>
       <Form className="formContainer" onSubmit={handleSubmit}>
-        <img
-          src="/form-banner.png"
-          alt="Banner"
-        />
+        <img src="/form-banner.png" alt="Banner" />
         <h3>Position Absolute Acı Pizza</h3>
         <div className="rating-container">
           <div className="price">85.50₺</div>

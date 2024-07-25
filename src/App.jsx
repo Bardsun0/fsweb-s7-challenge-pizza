@@ -9,7 +9,6 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Success from "./pages/Success";
 import OrderPizza from "./pages/OrderPizza";
-import Footer from "./components/Footer";
 
 function App() {
   const [orderData, setOrderData] = useState(null);
@@ -28,7 +27,6 @@ function App() {
           <Success orderData={orderData} />
         </Route>
       </Switch>
-      <Footer />
     </BrowserRouter>
   );
 }
