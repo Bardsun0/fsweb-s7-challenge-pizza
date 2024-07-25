@@ -91,7 +91,10 @@ function OrderPizza({ setOrderData }) {
   return (
     <>
       <Form className="formContainer" onSubmit={handleSubmit}>
-        <img src="./Assets/mile2-aseets/pictures/form-banner.png" alt="Banner"/>
+        <img
+          src="/form-banner.png"
+          alt="Banner"
+        />
         <h3>Position Absolute Acı Pizza</h3>
         <div className="rating-container">
           <div className="price">85.50₺</div>
@@ -223,7 +226,7 @@ function OrderPizza({ setOrderData }) {
             </div>
           ))}
         </div>
-        <MapComponent />
+        {/*<MapComponent />*/}
         <div className="input-container">
           <h3>Sipariş Notu</h3>
           <Input

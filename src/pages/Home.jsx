@@ -33,42 +33,42 @@ function Home() {
         <p>
           <img
             style={{ paddingRight: "10px" }}
-            src="./Assets/mile2-aseets/icons/1.svg"
+            src="/1.svg"
           />
           YENİ! Kore
         </p>
         <p>
           <img
             style={{ paddingRight: "10px" }}
-            src="./Assets/mile2-aseets/icons/2.svg"
+            src="/2.svg"
           />
           Pizza
         </p>
         <p>
           <img
             style={{ paddingRight: "10px" }}
-            src="./Assets/mile2-aseets/icons/3.svg"
+            src="/3.svg"
           />
           Burger
         </p>
         <p>
           <img
             style={{ paddingRight: "10px" }}
-            src="./Assets/mile2-aseets/icons/4.svg"
+            src="/4.svg"
           />
           Kızartmalar
         </p>
         <p>
           <img
             style={{ paddingRight: "10px" }}
-            src="./Assets/mile2-aseets/icons/5.svg"
+            src="/5.svg"
           />
           Fast food
         </p>
         <p>
           <img
             style={{ paddingRight: "10px" }}
-            src="./Assets/mile2-aseets/icons/6.svg"
+            src="/6.svg"
           />
           Gazlı İçecek
         </p>
@@ -113,31 +113,31 @@ function Home() {
         <h3>Acıktıran Kodlara Doyuran Lezzetler</h3>
         <div className="menu-categories">
           <button onClick={handleClick} className="category-button">
-            <img src="../../Assets/mile2-aseets/icons/1.svg" alt="Ramen" />{" "}
+            <img src="/1.svg" alt="Ramen" />{" "}
             Ramen
           </button>
           <button onClick={handleClick} className="category-button">
-            <img src="../../Assets/mile2-aseets/icons/2.svg" alt="Pizza" />{" "}
+            <img src="/2.svg" alt="Pizza" />{" "}
             Pizza
           </button>
           <button onClick={handleClick} className="category-button">
-            <img src="../../Assets/mile2-aseets/icons/3.svg" alt="Burger" />{" "}
+            <img src="/3.svg" alt="Burger" />{" "}
             Burger
           </button>
           <button onClick={handleClick} className="category-button">
             <img
-              src="../../Assets/mile2-aseets/icons/4.svg"
+              src="/4.svg"
               alt="French fries"
             />{" "}
             French fries
           </button>
           <button onClick={handleClick} className="category-button">
-            <img src="../../Assets/mile2-aseets/icons/5.svg" alt="Fast food" />{" "}
+            <img src="/5.svg" alt="Fast food" />{" "}
             Fast food
           </button>
           <button onClick={handleClick} className="category-button">
             <img
-              src="../../Assets/mile2-aseets/icons/6.svg"
+              src="/6.svg"
               alt="Soft drinks"
             />{" "}
             Soft drinks
@@ -147,7 +147,7 @@ function Home() {
           <div className="menu-item">
             <img
               onClick={handleClick}
-              src="../../Assets/mile2-aseets/pictures/food-1.png"
+              src="/food-1.png"
               alt="Terminal Pizza"
             />
             <h4>Terminal Pizza</h4>
@@ -157,7 +157,7 @@ function Home() {
           <div className="menu-item">
             <img
               onClick={handleClick}
-              src="../../Assets/mile2-aseets/pictures/food-2.png"
+              src="/food-2.png"
               alt="Position Absolute Acı Pizza"
             />
             <h4>Position Absolute Acı Pizza</h4>
@@ -167,7 +167,7 @@ function Home() {
           <div className="menu-item">
             <img
               onClick={handleClick}
-              src="../../Assets/mile2-aseets/pictures/food-3.png"
+              src="/food-3.png"
               alt="useEffect Tavuklu Burger"
             />
             <h4>useEffect Tavuklu Burger</h4>

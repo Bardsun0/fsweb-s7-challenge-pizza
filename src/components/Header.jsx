@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="header">
       <a href="/">
-        <img src="./Assets/mile1-assets/logo.svg" alt="logo" />
+        <img src="/logo.svg" alt="logo" />
       </a>
     </header>
   );

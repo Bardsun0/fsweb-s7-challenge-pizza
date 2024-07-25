@@ -7,22 +7,22 @@ function Footer() {
       <div className="footer-div-1">
         <div className="footer-div-2">
           <img
-            src="../../Assets/mile2-aseets/footer/logo-footer.svg"
+            src="/logo-footer.svg"
             className="footer-logo"
           />
           <div className="footer-div-3">
             <div className="footer-div-4">
-              <img src="../../Assets/mile2-aseets/footer/icons/icon-1.png" />
+              <img src="/icon-1.png" />
               <span>
                 341 Londonderry Road, <br /> Istanbul Türkiye{" "}
               </span>
             </div>
             <div className="footer-text1">
-              <img src="../../Assets/mile2-aseets/footer/icons/icon-2.png" />
+              <img src="/icon-2.png" />
               <span>aciktim@teknolojikyemekler.com </span>
             </div>
             <div className="footer-text1">
-              <img src="../../Assets/mile2-aseets/footer/icons/icon-3.png" />
+              <img src="/icon-3.png" />
               <span>+90 216 123 45 67 </span>
             </div>
           </div>
@@ -42,22 +42,22 @@ function Footer() {
           <h1>Instagram</h1>
           <ul className="footer-ul">
             <li>
-              <img src="../../Assets/mile2-aseets/footer/insta/li-0.png" />
+              <img src="/li-0.png" />
             </li>
             <li>
-              <img src="../../Assets/mile2-aseets/footer/insta/li-1.png" />
+              <img src="/li-1.png" />
             </li>
             <li>
-              <img src="../../Assets/mile2-aseets/footer/insta/li-2.png" />
+              <img src="/li-2.png" />
             </li>
             <li>
-              <img src="../../Assets/mile2-aseets/footer/insta/li-3.png" />
+              <img src="/li-3.png" />
             </li>
             <li>
-              <img src="../../Assets/mile2-aseets/footer/insta/li-4.png" />
+              <img src="/li-4.png" />
             </li>
             <li>
-              <img src="../../Assets/mile2-aseets/footer/insta/li-5.png" />
+              <img src="/li-5.png" />
             </li>
           </ul>
         </div>
@@ -67,7 +67,7 @@ function Footer() {
           <p>© 2023 Teknolojik Yemekler.</p>
           <ul>
             <img
-              src="../../Assets/mile2-aseets/footer/tw.png"
+              src="/tw.png"
               style={{ width: "18px", height: "15px" }}
             />
           </ul>
