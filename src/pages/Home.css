@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url("Assets/mile1-assets/home-banner.png");
+  background-image: url("/home-banner.png");
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -104,13 +104,13 @@
 .card-1 {
   width: 636px;
   height: 536px;
-  background-image: url("./Assets/mile2-aseets/cta/kart-1.png");
+  background-image: url("/kart-1.png");
 }
 
 .card-2 {
   width: 636px;
   height: 256px;
-  background-image: url("./Assets/mile2-aseets/cta/kart-2.png");
+  background-image: url("/kart-2.png");
 }
 
 .card-2 p {
@@ -124,7 +124,7 @@
 .card-3 {
   width: 636px;
   height: 257px;
-  background-image: url("./Assets/mile2-aseets/cta/kart-3.png");
+  background-image: url("/kart-3.png");
 }
 
 .card-3 p {
